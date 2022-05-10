@@ -1,18 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/addGoods">AddGoods</router-link> |
+    <router-link to="/goods">Goods</router-link> |
+    <router-link to="/screenShort">ScreenShort</router-link> |
+    <router-link to="/cropper">Cropper</router-link> |
+    <router-link to="/countUp">CountUp</router-link> |
+    <router-link to="/qrCode">QrCode</router-link> |
+    <router-link to="/copy">Copy</router-link> |
+    <router-link to="/drag">Drag</router-link> |
+    <router-link to="/video">Video</router-link> |
+    <router-link to="/pdf">Pdf</router-link> |
+    <router-link to="/chartDouble">ChartDouble</router-link> |
+    <router-link to="/table">Table</router-link> |
+    <router-link to="/html2canvas">Html2Canvas</router-link> |
+    <router-link to="/screenCapture">ScreenCapture</router-link>
+  </div>
+  <router-view/>
 </template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
 <style>
 #app {
@@ -21,6 +26,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
