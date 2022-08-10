@@ -76,6 +76,21 @@ const routes = [
     path: '/screenCapture',
     name: 'ScreenCapture',
     component: () => import(/* webpackChunkName: "about" */ '../views/ScreenCapture.vue')
+  },
+  {
+    path: '/copyTo',
+    name: 'CopyTo',
+    component: () => import(/* webpackChunkName: "about" */ '../views/CopyTo.vue')
+  },
+  {
+    path: '/randomColor',
+    name: 'RandomColor',
+    component: () => import(/* webpackChunkName: "about" */ '../views/RandomColor.vue')
+  },
+  {
+    path: '/vue-codemirror',
+    name: 'Vue-codemirror',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Vue-codemirror.vue')
   }
 ]
 

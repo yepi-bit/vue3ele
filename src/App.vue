@@ -14,7 +14,10 @@
     <router-link to="/chartDouble">ChartDouble</router-link> |
     <router-link to="/table">Table</router-link> |
     <router-link to="/html2canvas">Html2Canvas</router-link> |
-    <router-link to="/screenCapture">ScreenCapture</router-link>
+    <router-link to="/screenCapture">ScreenCapture</router-link> |
+    <router-link to="/copyTo">CopyTo</router-link> |
+    <router-link to="/randomColor">RandomColor</router-link> |
+    <router-link to="/vue-codemirror">Vue-codemirror</router-link>
   </div>
   <router-view/>
 </template>

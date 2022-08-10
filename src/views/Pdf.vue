@@ -14,13 +14,13 @@
 <script>
     export default {
         name: "Pdf",
-        data(){
-            return{
+        data() {
+            return {
                 dialogVisible: false
             }
         },
-        methods:{
-            openDialog(){
+        methods: {
+            openDialog() {
                 this.dialogVisible = true
             },
             handleClose() {
