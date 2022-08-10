@@ -64,7 +64,14 @@
                     theme: 'night',
                     // 显示行号
                     lineNumbers: true,
-                    line: true
+                    smartIndent: true , //智能缩进
+                    autofocus:true, //自动聚焦
+                    autoCloseBrackets: true , // 自动闭合符号
+                    styleActiveLine:true, // 显示选中行的样式
+                    // firstLineNumber: "integer", 改变左侧文字
+                    line: true,
+                    lineWrapping: 'wrap', // 文字过长时，是换行(wrap)还是滚动(scroll),默认是滚动
+                    showCursorWhenSelecting: true, // 文本选中时显示光标
                 },
                 // 支持切换的语法高亮类型，对应 JS 已经提前引入
                 // 使用的是 MIME-TYPE ，不过作为前缀的 text/ 在后面指定时写死了
@@ -121,8 +128,9 @@
 
                 // 支持双向绑定
                 this.coder.on('change', (coder) => {
-                    this.code = coder.getValue()
-
+                    this.code = coder.getValue();
+                    // let line = coder.getLine(0)//获取指定行的文本内容
+                    // let select = coder.getSelection()//判断是否被选择
                     if (this.$emit) {
                         this.$emit('input', this.code)
                     }
@@ -174,7 +182,7 @@
         position: relative;
     }
     .in-coder-panel:hover {
-        box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.8);
+        box-shadow: 0 0 17px 0 rgba(0,0,0,0.6);
     }
 
     .in-coder-panel .CodeMirror {
